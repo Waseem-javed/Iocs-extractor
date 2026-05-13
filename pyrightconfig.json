@@ -1,0 +1,8 @@
+{
+  "include": ["app"],
+  "exclude": [".venv", "**/__pycache__", "**/*.txt"],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.11",
+  "reportMissingModuleSource": "none"
+}
