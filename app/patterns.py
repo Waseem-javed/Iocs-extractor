@@ -1,3 +1,22 @@
+
+# ── Benign Filtering ─────────────────────────────────────────────────────────
+BENIGN_ORGS = {
+    "Microsoft", "Google", "Apple", "Amazon", "Facebook", "Meta", "Oracle", "IBM",
+    "CISA", "FBI", "NSA", "United States", "US", "U.S.", "UK", "UK's", "Russia", "China", 
+    "Iran", "JetBrains", "SolarWinds", "Zabbix", "Webroot", "Dropbox", "OneDrive",
+    "SQL Server", "Visual Studio", "Windows", "Office", "Symantec", "Broadcom",
+    "Deep Instinct", "CrowdStrike", "Mandiant", "Recorded Future", "Palo Alto Networks",
+    "CERT", "FBI", "NCSC", "NSA", "SKW", "Golo M\u00fchr", "Claire Zaboeva", "Joe Fasulo",
+    "IBM Security Intelligence", "X-Force", "IBM X-Force"
+}
+
+# Key words to identify CTI
+CTI_KEYWORDS = {
+    "malware", "backdoor", "exploit", "cyber", "attack", "campaign", "group", 
+    "threat", "actor", "hacking", "vulnerability", "cve", "payload", "stager",
+    "dropper", "phishing", "breach", "compromise", "espionage"
+}
+
 # IPv4 — plain (1.2.3.4) and defanged (1.2.3[.]4 / 1[.]2[.]3[.]4)
 IP_REGEX = r"\b(?:\d{1,3}(?:\[\.\]|\.)){3}\d{1,3}\b"
 
@@ -31,10 +50,12 @@ BTC_REGEX = r"\b(?:bc1[a-zA-HJ-NP-Z0-9]{6,87}|[13][a-zA-HJ-NP-Z0-9]{25,34})\b"
 
 # Threat Actor aliases (named groups, numbered groups, known APTs)
 THREAT_ACTOR_REGEX = (
-    r"\b(?:TA-[A-Z][a-zA-Z0-9]+|FIN\d+|APT\d+|UNC-\d+|LAPSUS\$?"
-    r"|Lazarus(?:\s+Group)?|Sandworm|Fancy\s+Bear|Cozy\s+Bear|Turla|Kimsuky"
+    r"\b(?:TA\s*-\s*[A-Z][a-zA-Z0-9]+|FIN\s*\d+|APT\s*\d+|UNC\s*-\s*\d+|LAPSUS\$?"
+    r"|Lazarus(?:\s+Group)?|Sandworm|Fancy\s+Bear|Cozy\s*Bear|Turla|Kimsuky"
     r"|LockBit|BlackCat|ALPHV|REvil|DarkSide|Conti|Hive|TA-505"
-    r"|ShadowForge|UNC-2147)\b"
+    r"|ShadowForge|UNC-2147|SVR|NOBELIUM|Midnight\s+Blizzard|The\s+Dukes"
+    r"|Cozy\s*Bear|Pawn\s+Storm|Voodoo\s+Bear|Iron\s+Twilight"
+    r"|ITG05|UAC-028|Forest\s+Blizzard|Midnight\s+Blizzard|Fancy\s+Bear)\b"
 )
 
 # Malware families and offensive tools
@@ -43,7 +64,9 @@ MALWARE_REGEX = (
     r"|PowerShell\s+Empire|TrickBot|AgentTesla|AsyncRAT|NjRAT|QuasarRAT"
     r"|BlackCat|ALPHV|LockBit|Ryuk|Conti|REvil|Hive|NetSupportRAT"
     r"|IcedID|Qakbot|Dridex|Raccoon|Vidar|FormBook|GuLoader"
-    r"|ShadowLoader|SfLoader)\b"
+    r"|ShadowLoader|SfLoader|WellMess|WellMail|Sorefang|GraphicalProton"
+    r"|EDRSandBlast|SharpChromium|Rubeus|Mimikatz|PowerSploit|WinPEAS"
+    r"|Headlace|Headlace\s+backdoor|Steal-It|Graphite|Credomap)\b"
 )
 
 # Windows Registry Keys

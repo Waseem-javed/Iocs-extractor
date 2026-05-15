@@ -1,0 +1,715 @@
+{
+  "ips": [
+    "103.76.128.34",
+    "65.20.97.203",
+    "65.21.51.58"
+  ],
+  "domains": [
+    "Poetpages.com",
+    "cisa.gov",
+    "cisecurity.org",
+    "document-c.infinityfreeapp.com",
+    "downloaddoc.infinityfreeapp.com",
+    "downloadingdoc.infinityfreeapp.com",
+    "github.com",
+    "images1.cmp.optimizely.com",
+    "images2.cmp.optimizely.com",
+    "images3.cmp.optimizely.com",
+    "images4.cmp.optimizely.com",
+    "infinityfreeapp.com",
+    "ipapi.co",
+    "learn.microsoft.com",
+    "matclick.com",
+    "mockbin.org",
+    "poetpages.com",
+    "run.mocky.io",
+    "www.msn.com"
+  ],
+  "urls": [
+    "https://document-c.infinityfreeapp.com/execdwn.php?",
+    "https://downloaddoc.infinityfreeapp.com/execdwn.php?",
+    "https://downloaddoc.infinityfreeapp.com/execdwn.php?id=6a98168f-",
+    "https://downloadingdoc.infinityfreeapp.com/?id=61726832-",
+    "https://downloadingdoc.infinityfreeapp.com/execdwn.php?id=61726832-",
+    "https://downloadingdoc.infinityfreeapp.com/filedwn.php",
+    "https://downloadingdoc.infinityfreeapp.com/filedwn.php?id=61726832-",
+    "https://github.com/wavestone-cdt/EDRSandblast#edr-drivers-and-processes-detection",
+    "https://images1.cmp.optimizely.com/Zz0yYzFmODJiMDk0NzAxMWVlOGMzNTAyMzEzYWMzMDJlNA==",
+    "https://images1.cmp.optimizely.com/Zz1hYWYwMDEzNDk0NmUxMWVlYjE0YzIyYTAzYTkxM2JjOA==",
+    "https://images1.cmp.optimizely.com/Zz1jMjFmODFjNjk1NWExMWVlODljODEyODVmNzcyMzRjNA==",
+    "https://images1.cmp.optimizely.com/Zz1lNTc0NzQ3MDk0NmUxMWVlYjk1NjVlYmU0ZTY4YTQzYw==",
+    "https://images2.cmp.optimizely.com/Zz03NDljZTNmNDk0NmUxMWVlYmMxNDRhZDJiYTFiODhmNQ==",
+    "https://images2.cmp.optimizely.com/Zz0wYTA3YWNlODk0NzAxMWVlYWZmNjA2NTM0ZTVjZmVkZA==",
+    "https://images3.cmp.optimizely.com/Zz0wOGM0ZjRkYzk0NzMxMWVlYThkMWNlYmYxYWViYzM5Mg==",
+    "https://images4.cmp.optimizely.com/",
+    "https://images4.cmp.optimizely.com/Zz1jN2Q0NzAxODk1NWExMWVlOWIxNjFhMDBjN2Q1YzllYg==",
+    "https://images4.cmp.optimizely.com/Zz1jOWQ5OTBlYzk0NmUxMWVlYmNiZjFhNmIxMWQ4M2NkMw==",
+    "https://images4.cmp.optimizely.com/Zz1kZTQ3NGQ1ZTk1NTgxMWVlOWJiNjhhYjFkYjM5OWVkZg==",
+    "https://images4.cmp.optimizely.com/Zz1lNzFiMzI3Njk0NzAxMWVlOGUwOWMyOTcxYTUyNmNkYg==",
+    "https://ipapi.co/json",
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-",
+    "https://matclick.com/wp-query.php",
+    "https://mockbin.org/bin/229f6d51-f534-466f-b642-e86811631083",
+    "https://mockbin.org/bin/229f6d51-f534-466f-b642-e86811631083/",
+    "https://mockbin.org/bin/7cc44695-0c31-4620-bed4-2e60adf0a4b6",
+    "https://mockbin.org/bin/902ca47f-644d-4d44-88ec-060fdb7acaa4",
+    "https://mockbin.org/bin/92354a6a-ba1f-4a1a-abea-fba269cabd66",
+    "https://run.mocky.io/v3/027fab50-2478-4dd2-962f-bb525b36810d"
+  ],
+  "hashes": [
+    {
+      "hash": "01B5F7094DE0B2C6F8E28AA9A2DED678C166D615530E595621E692A9C0240732",
+      "type": "SHA256"
+    },
+    {
+      "hash": "01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd",
+      "type": "SHA256"
+    },
+    {
+      "hash": "0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5",
+      "type": "SHA256"
+    },
+    {
+      "hash": "0db8cd7f349afe5a85cd3fd798e2cf4dcb7d2cbbdea3c312f2c7108c4347ada4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "103adb71848a31021692f5ba2ef1691eb29f3ded81b86954753f2f2fbeda08a7",
+      "type": "SHA256"
+    },
+    {
+      "hash": "16bcd167162e4ded71b8c7e9a2587be821d3a752c71fcbb2ae64cf1088b62fc0",
+      "type": "SHA256"
+    },
+    {
+      "hash": "18101518EAE3EEC6EBE453DE4C4C380160774D7C3ED5C79E1813013AC1BB0B93",
+      "type": "SHA256"
+    },
+    {
+      "hash": "19F1EF66E449CF2A2B0283DBB756850CCA396114286E1485E35E6C672C9C3641",
+      "type": "SHA256"
+    },
+    {
+      "hash": "19e95b32b77d8dfd294c085793cd542d82eddac8e772818fea2826fa02a5cc54",
+      "type": "SHA256"
+    },
+    {
+      "hash": "1E74CF0223D57FD846E171F4A58790280D4593DF1F23132044076560A5455FF8",
+      "type": "SHA256"
+    },
+    {
+      "hash": "1cfa9dbc91e3d136cbd42670f5a587963dab5898e7bd68684966d6e07bcb23e2",
+      "type": "SHA256"
+    },
+    {
+      "hash": "1f4792dadaf346969c5e4870a01629594b6c371de21f8635c95aa6aba24ef24c",
+      "type": "SHA256"
+    },
+    {
+      "hash": "219FB90D2E88A2197A9E08B0E7811E2E0BD23D59233287587CCC4642C2CF3D67",
+      "type": "SHA256"
+    },
+    {
+      "hash": "22ed5c5cd9c6a351398f1e56efdfb16d52cd33cb4b206237487a03443d3de893",
+      "type": "SHA256"
+    },
+    {
+      "hash": "243bab79863327915c315c188c0589202f64b3500a3fee3e2c9f3d34e8e1f154",
+      "type": "SHA256"
+    },
+    {
+      "hash": "290b63be4b81ee8a569cb3298eac089b775acc07c82a2d9ea800de8314c6f342",
+      "type": "SHA256"
+    },
+    {
+      "hash": "2ac6735e8e0b23b222161690adf172aec668894d170299e9ff2c54a4ec25b1f4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "34C8F155601A3948DDB0D60B582CFE87DE970D443CC0E05DF48B1A1AD2E42B5E",
+      "type": "SHA256"
+    },
+    {
+      "hash": "3cc52ef447578f4ab549f692013d7f2e849aba8cad83a8d63bf1569d874f38fa",
+      "type": "SHA256"
+    },
+    {
+      "hash": "45e44afeb8b890004fd1cb535978d0754ceaa7129082cb72386a80a5532700d1",
+      "type": "SHA256"
+    },
+    {
+      "hash": "47074a6d033966d07e4587705401533ad6c5fa2b11303c520a37999337d1a1eb",
+      "type": "SHA256"
+    },
+    {
+      "hash": "4BF1915785D7C6E0987EB9C15857F7AC67DC365177A1707B14822131D43A6166",
+      "type": "SHA256"
+    },
+    {
+      "hash": "4EE70128C70D646C5C2A9A17AD05949CB1FBF1043E9D671998812B2DCE75CF0F",
+      "type": "SHA256"
+    },
+    {
+      "hash": "595590fdfa9618b7f7aab5b8795f9336d71c8918f60aa88dce5d4b07c7071a5a",
+      "type": "SHA256"
+    },
+    {
+      "hash": "5a58e99a0ecdc461ce11c8253df9ea410076d56abc254628ed5ff4e5622acfde",
+      "type": "SHA256"
+    },
+    {
+      "hash": "5b8c240083cba4442fb6bbb092efd430ce998530cc10fd181b3f71845ec190ce",
+      "type": "SHA256"
+    },
+    {
+      "hash": "620D2BF14FE345EEF618FDD1DAC242B3A0BB65CCB75699FE00F7C671F2C1D869",
+      "type": "SHA256"
+    },
+    {
+      "hash": "68bfa69cdbf947eac31e736b2e54244e829e302ea8dafd65edc6e0f879257a53",
+      "type": "SHA256"
+    },
+    {
+      "hash": "726af8cd2d92691045ebe659d77acf4ae19b7172e383556befb79719fb78d7ce",
+      "type": "SHA256"
+    },
+    {
+      "hash": "773F0102720AF2957859D6930CD09693824D87DB705B3303CEF9EE794375CE13",
+      "type": "SHA256"
+    },
+    {
+      "hash": "79fe0b155cf5d2b45d28946ad6ba47f7282b468af064c29346dcd1dcd0aec507",
+      "type": "SHA256"
+    },
+    {
+      "hash": "7B666B978DBBE7C032CEF19A90993E8E4922B743EE839632BFA6D99314EA6C53",
+      "type": "SHA256"
+    },
+    {
+      "hash": "84638698fdcf2e9e45e7dd560c8d00fb4da6fa32dabaacd31b3538d38755dad4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "896ca8488c9d8792bd0197646d857e0c2ae0312bbc6d812c12da45016f019264",
+      "type": "SHA256"
+    },
+    {
+      "hash": "8AFB71B7CE511B0BCE642F46D6FC5DD79FAD86A58223061B684313966EFEF9C7",
+      "type": "SHA256"
+    },
+    {
+      "hash": "8cc664ff412fc80485d0af61fb0617f818d37776e5a06b799f74fe0179b31768",
+      "type": "SHA256"
+    },
+    {
+      "hash": "92C7693E82A90D08249EDEAFBCA6533FED81B62E9E056DEC34C24756E0A130A6",
+      "type": "SHA256"
+    },
+    {
+      "hash": "950ADBAF66AB214DE837E6F1C00921C501746616A882EA8C42F1BAD5F9B6EFF4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "971F0CED6C42DD2B6E3EA3E6C54D0081CF9B06E79A38C2EDE3A2C5228C27A6DC",
+      "type": "SHA256"
+    },
+    {
+      "hash": "9a798e0b14004e01c5f336aeb471816c11a62af851b1a0f36284078b8cf09847",
+      "type": "SHA256"
+    },
+    {
+      "hash": "9f5846193f545341b0c897947e07bc068712e396fe7c0863d43420bbd633aab1",
+      "type": "SHA256"
+    },
+    {
+      "hash": "B53E27C79EED8531B1E05827ACE2362603FB9F77F53CEE2E34940D570217CBF7",
+      "type": "SHA256"
+    },
+    {
+      "hash": "C37C109171F32456BBE57B8676CC533091E387E6BA733FBAA01175C43CFB6EBD",
+      "type": "SHA256"
+    },
+    {
+      "hash": "C40A8006A7B1F10B1B42FDD8D6D0F434BE503FB3400FB948AC9AB8DDFA5B78A0",
+      "type": "SHA256"
+    },
+    {
+      "hash": "C7B01242D2E15C3DA0F45B8ADEC4E6913E534849CDE16A2A6C480045E03FBEE4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "C832462C15C8041191F190F7A88D25089D57F78E97161C3003D68D0CC2C4BAA3",
+      "type": "SHA256"
+    },
+    {
+      "hash": "CB83E5CB264161C28DE76A44D0EDB450745E773D24BEC5869D85F69633E44DCF",
+      "type": "SHA256"
+    },
+    {
+      "hash": "CD3584D61C2724F927553770924149BB51811742A461146B15B34A26C92CAD43",
+      "type": "SHA256"
+    },
+    {
+      "hash": "D724728344FCF3812A0664A80270F7B4980B82342449A8C5A2FA510E10600443",
+      "type": "SHA256"
+    },
+    {
+      "hash": "EBE231C90FAD02590FC56D5840ACC63B90312B0E2FEE7DA3C7606027ED92600E",
+      "type": "SHA256"
+    },
+    {
+      "hash": "F1B40E6E5A7CBC22F7A0BD34607B13E7E3493B8AAD7431C47F1366F0256E23EB",
+      "type": "SHA256"
+    },
+    {
+      "hash": "F6194121E1540C3553273709127DFA1DAAB96B0ACFAB6E92548BFB4059913C69",
+      "type": "SHA256"
+    },
+    {
+      "hash": "a37140d97600573ace4fc31a9d289adcedb5c9cbfb92059b7184e46b635aaf57",
+      "type": "SHA256"
+    },
+    {
+      "hash": "a50e32f52c249129655a9cb7be28b4efc32244c70f5ed1b4c4925b1b8f41199e",
+      "type": "SHA256"
+    },
+    {
+      "hash": "a706778508af9e507d6d4b509276e9b82ce94f8a2ec913cc2deadba5aaa7d538",
+      "type": "SHA256"
+    },
+    {
+      "hash": "a760b01841a120eccc22856af1c9a8e513871366ef329502f42f9648708720ca",
+      "type": "SHA256"
+    },
+    {
+      "hash": "ab5aef93ffe694970374af638b407dbd56ea5a548235973f51cba67cd7baa07e",
+      "type": "SHA256"
+    },
+    {
+      "hash": "d281a1fa09e7810a4a9e13750d227f557e54370689fd86216332534bc9214918",
+      "type": "SHA256"
+    },
+    {
+      "hash": "d37779e16a92da7bd05eae50c64b36e2e2022eb441382be686fda4dbd1800e90",
+      "type": "SHA256"
+    },
+    {
+      "hash": "e699a7971a38fe723c690f37ba81187eb8ed78e51846aa86aa89524c325358b4",
+      "type": "SHA256"
+    },
+    {
+      "hash": "ed56740c66609d2bbd39dc60cf29ee47743344a9a6861bee7c08ccfb27376506",
+      "type": "SHA256"
+    },
+    {
+      "hash": "ed982645d677c04cb5846251924a12e0e2c9ed16d8fa800a628189faf5009c9f",
+      "type": "SHA256"
+    },
+    {
+      "hash": "f5b7a2d9872312e000acbe3dc8153707acecc5ba184f97ad6014327db16549c7",
+      "type": "SHA256"
+    },
+    {
+      "hash": "f983d786f4dc2d1793f6b28907c4035c96b6b5c8765ba12dc4510dab0fceabf5",
+      "type": "SHA256"
+    }
+  ],
+  "cves": [
+    "CVE-2023-38831",
+    "CVE-2023-42793"
+  ],
+  "ttps": [
+    "T1003",
+    "T1003.001",
+    "T1003.002",
+    "T1020",
+    "T1027.001",
+    "T1033",
+    "T1036",
+    "T1041",
+    "T1046",
+    "T1047",
+    "T1049",
+    "T1053.005",
+    "T1055",
+    "T1057",
+    "T1059.001",
+    "T1059.003",
+    "T1068",
+    "T1098",
+    "T1190",
+    "T1203",
+    "T1210",
+    "T1505.001",
+    "T1547",
+    "T1555.003",
+    "T1558.001",
+    "T1562.001",
+    "T1564",
+    "T1564.001",
+    "T1567",
+    "T1568",
+    "T1572",
+    "T1574.002",
+    "T1590",
+    "T1590.004",
+    "T1592.002"
+  ],
+  "emails": [
+    "Report@cisa.gov",
+    "SOC@cisecurity.org"
+  ],
+  "bitcoin_wallets": [],
+  "threat_actors": {
+    "known": [
+      "APT\n29",
+      "APT 29",
+      "APT28",
+      "CozyBear",
+      "Fancy Bear",
+      "Forest Blizzard",
+      "ITG05",
+      "Midnight Blizzard",
+      "NOBELIUM",
+      "SVR",
+      "UAC-028",
+      "the Dukes"
+    ],
+    "unknown": [
+      "34C8F155601A3948DDB0D60B582CFE87DE970D443CC0E05DF48B1A1AD2E42B5E",
+      "API",
+      "APT",
+      "AV",
+      "Alert",
+      "Allied\nNetworks",
+      "CERT Polska",
+      "CERT-UA",
+      "CISA Insights",
+      "CSA",
+      "CVE-2023-38831",
+      "CVE-2023-42793",
+      "Calc",
+      "Calc.exe",
+      "Command",
+      "Control\nTechnique Title ID Use\nDynamic",
+      "Credential Access\nTechnique Title ID Use\nOS",
+      "Critical Infrastructure",
+      "DHS",
+      "DLL",
+      "Defender Advanced Threat",
+      "Diplomatic Orbiter",
+      "EDR",
+      "EU",
+      "File Path,",
+      "Gather Victim Network\nInformation",
+      "Hamas",
+      "IBM Security Intelligence\nhttps://images3.cmp.optimizely.com/Zz0wOGM0ZjRkYzk0NzMxMWVlYThkMWNlYmYxYWViYzM5Mg==",
+      "IC",
+      "Infinityfreeapp",
+      "Initial Access - Exploitation",
+      "Javascript",
+      "JetBrains TeamCity",
+      "Joint Cyber Security Advisory",
+      "Joint Cybersecurity Advisory",
+      "KB",
+      "Logon Autostart",
+      "MITRE ATT&CK TACTICS",
+      "MSEdge",
+      "Microsoft 365",
+      "Modify Tools",
+      "NTLM",
+      "National Cyber Security Centre",
+      "Needs",
+      "PDF",
+      "Post-Compromise Threat Activity",
+      "Rsockstun",
+      "Russian Foreign Intelligence Service",
+      "SAM",
+      "SHA1",
+      "SHA256",
+      "SQL",
+      "SQL Stored Procedures\nT1505.001",
+      "Server Software",
+      "Shell",
+      "The U.S. Federal Bureau of Investigation (FBI",
+      "U.S. Cybersecurity & Infrastructure Security Agency",
+      "United Nations Human Rights Council",
+      "WinRAR",
+      "Windows Command\nShell\nT1059.003",
+      "Windows Management\nInstrumentation",
+      "Windows Task Schedule",
+      "Zabbix DLL",
+      "Zscaler",
+      "id:1",
+      "sha256 malicious",
+      "the Bank of Israel",
+      "the MITRE ATT&CK for Enterprise",
+      "the U.S. Government",
+      "the United Nations",
+      "the United States Congressional Research Service",
+      "\u2022 Deploy"
+    ]
+  },
+  "malware": {
+    "known": [
+      "Credomap",
+      "EDRSandBlast",
+      "EDRSandblast",
+      "GraphicalProton",
+      "Graphite",
+      "Headlace",
+      "Mimikatz",
+      "PowerSploit",
+      "Rubeus",
+      "SharpChromium",
+      "Sorefang",
+      "WellMail",
+      "WellMess",
+      "WinPEAS"
+    ],
+    "unknown": [
+      "BMP",
+      "Cyber",
+      "Discovery",
+      "Dukes",
+      "PROGRAMDATA%",
+      "TeamCity",
+      "discovery",
+      "sha256"
+    ]
+  },
+  "registry_keys": [
+    "HKLM\\SAM",
+    "HKLM\\SECURITY",
+    "HKLM\\SYSTEM",
+    "HKLM\\\\SYSTEM.*|.*HKLM\\\\SECURITY.*|.*HKLM\\\\SAM.*"
+  ],
+  "mutexes": [],
+  "user_agents": [],
+  "other_entities": [
+    {
+      "text": "APT29_GraphicalProton",
+      "label": "GPE"
+    },
+    {
+      "text": "Asia",
+      "label": "LOC"
+    },
+    {
+      "text": "Australia",
+      "label": "GPE"
+    },
+    {
+      "text": "Austria",
+      "label": "GPE"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "Belgium",
+      "label": "GPE"
+    },
+    {
+      "text": "Bring Your Own\nVulnerable Driver",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Bring Your Own Vulnerable Driver",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "C:\\Program Files\\Windows Defender Advanced Threat",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "C:\\Windows\\temp\\1\\se.sa",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "C:\\Windows\\temp\\1\\sy.sa",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "COVID-19",
+      "label": "GPE"
+    },
+    {
+      "text": "CVE-2023",
+      "label": "GPE"
+    },
+    {
+      "text": "Canadian",
+      "label": "NORP"
+    },
+    {
+      "text": "DC",
+      "label": "GPE"
+    },
+    {
+      "text": "Domain",
+      "label": "GPE"
+    },
+    {
+      "text": "Europe",
+      "label": "LOC"
+    },
+    {
+      "text": "French",
+      "label": "NORP"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
+      "label": "NORP"
+    },
+    {
+      "text": "Hungary",
+      "label": "GPE"
+    },
+    {
+      "text": "Israel",
+      "label": "GPE"
+    },
+    {
+      "text": "Italy",
+      "label": "GPE"
+    },
+    {
+      "text": "JS Dropper",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "JS Dropper URL\nhttps://downloaddoc.infinityfreeapp[.]com/execdwn.php",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Kazakhstan",
+      "label": "GPE"
+    },
+    {
+      "text": "Latvia",
+      "label": "GPE"
+    },
+    {
+      "text": "Levant",
+      "label": "GPE"
+    },
+    {
+      "text": "Main Points of the Bank of Israel\u2019s Position Presented",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Mitigations",
+      "label": "NORP"
+    },
+    {
+      "text": "Mockbin",
+      "label": "GPE"
+    },
+    {
+      "text": "Mocky",
+      "label": "GPE"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "Romania",
+      "label": "GPE"
+    },
+    {
+      "text": "Russian",
+      "label": "NORP"
+    },
+    {
+      "text": "Russia\u2019s War Against Ukraine:",
+      "label": "EVENT"
+    },
+    {
+      "text": "Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "Ticket\nGranting Tickets",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Turkey",
+      "label": "GPE"
+    },
+    {
+      "text": "Turkish",
+      "label": "NORP"
+    },
+    {
+      "text": "T\u00fcrkiye",
+      "label": "GPE"
+    },
+    {
+      "text": "U.K.",
+      "label": "GPE"
+    },
+    {
+      "text": "Ukraine",
+      "label": "GPE"
+    },
+    {
+      "text": "Ukrainian",
+      "label": "GPE"
+    },
+    {
+      "text": "WindowsCodecs.dll",
+      "label": "GPE"
+    },
+    {
+      "text": "aec02d48-92f3-45a5",
+      "label": "NORP"
+    },
+    {
+      "text": "rundll32 C:\\Windows\\system32\\AclNumsInvertHost.dll",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "the\nRepublic of Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "the Palestinian Territories",
+      "label": "GPE"
+    },
+    {
+      "text": "the Republic of Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "the Republic of Belarus",
+      "label": "GPE"
+    },
+    {
+      "text": "the Republic of Belarus on Economic\nCooperation",
+      "label": "GPE"
+    },
+    {
+      "text": "the Republic of Belarus on Economic Cooperation",
+      "label": "GPE"
+    },
+    {
+      "text": "the United States",
+      "label": "GPE"
+    },
+    {
+      "text": "the United States\nAgency",
+      "label": "GPE"
+    },
+    {
+      "text": "the War",
+      "label": "EVENT"
+    }
+  ]
+}
