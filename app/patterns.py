@@ -45,8 +45,9 @@ TTP_REGEX = r"\bT\d{4}(?:\.\d{3})?\b"
 # Email addresses — plain and defanged
 EMAIL_REGEX = r"[a-zA-Z0-9._%+\-]+@(?:[a-zA-Z0-9\-]+(?:\[\.\]|\.))+[a-zA-Z]{2,}"
 
-# Bitcoin wallet addresses — Bech32 (bc1q...) and Legacy (1.../3...)
-BTC_REGEX = r"\b(?:bc1[a-zA-HJ-NP-Z0-9]{6,87}|[13][a-zA-HJ-NP-Z0-9]{25,34})\b"
+# Bitcoin wallet candidates — validated with Base58Check/Bech32 in helpers
+# (legacy 1/3 addresses overlap 32-char hex MD5 hashes without checksum checks)
+BTC_REGEX = r"\b(?:bc1[a-zA-HJ-NP-Z0-9]{6,87}|[13][a-km-zA-HJ-NP-Z1-9]{25,34})\b"
 
 # Threat Actor aliases (named groups, numbered groups, known APTs)
 THREAT_ACTOR_REGEX = (
@@ -55,10 +56,11 @@ THREAT_ACTOR_REGEX = (
     r"|LockBit|BlackCat|ALPHV|REvil|DarkSide|Conti|Hive|TA-505"
     r"|ShadowForge|UNC-2147|SVR|NOBELIUM|Midnight\s+Blizzard|The\s+Dukes"
     r"|Cozy\s*Bear|Pawn\s+Storm|Voodoo\s+Bear|Iron\s+Twilight"
-    r"|ITG05|UAC-028|Forest\s+Blizzard|Midnight\s+Blizzard|Fancy\s+Bear)\b"
+    r"|ITG05|UAC-028|Forest\s+Blizzard|Midnight\s+Blizzard|Fancy\s+Bear"
+    r"|MuddyWater|Diplomatic\s+Orbiter)\b"
 )
 
-# Malware families and offensive tools
+# Malware families
 MALWARE_REGEX = (
     r"\b(?:RedLine|Emotet|Cobalt\s+Strike|Sliver|Mimikatz|Metasploit"
     r"|PowerShell\s+Empire|TrickBot|AgentTesla|AsyncRAT|NjRAT|QuasarRAT"
@@ -66,7 +68,7 @@ MALWARE_REGEX = (
     r"|IcedID|Qakbot|Dridex|Raccoon|Vidar|FormBook|GuLoader"
     r"|ShadowLoader|SfLoader|WellMess|WellMail|Sorefang|GraphicalProton"
     r"|EDRSandBlast|SharpChromium|Rubeus|Mimikatz|PowerSploit|WinPEAS"
-    r"|Headlace|Headlace\s+backdoor|Steal-It|Graphite|Credomap)\b"
+    r"|Headlace|Headlace\s+backdoor|Steal-It|Graphite|Credomap|Rsockstun)\b"
 )
 
 # Windows Registry Keys
