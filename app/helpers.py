@@ -1,8 +1,6 @@
 import hashlib
 import re
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
 _BASE58_ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 _BECH32_CHARSET = set("qpzry9x8gf2tvdw0s3jn54khce6mua7l")
 
@@ -55,13 +53,40 @@ def find_all(pattern: str, src: str, flags: int = 0) -> list[str]:
     return sorted(results)
 
 
+def matches_pattern(pattern: str, text: str, flags: int = re.I) -> bool:
+    return bool(re.search(pattern, text, flags))
+
+
 def classify_hash(h: str) -> str:
-    length = len(h)
-    return {64: "SHA256", 40: "SHA1", 32: "MD5"}.get(length, "UNKNOWN")
+    return {64: "SHA256", 40: "SHA1", 32: "MD5"}.get(len(h), "UNKNOWN")
+
+
+def extract_hashes(src: str, patterns: tuple[str, ...]) -> list[dict[str, str]]:
+    raw: set[str] = set()
+    for pattern in patterns:
+        raw.update(find_all(pattern, src))
+    return [{"hash": h, "type": classify_hash(h)} for h in sorted(raw)]
+
+
+def extract_iocs(src: str, pattern_map: dict[str, tuple[str, int]]) -> dict[str, list[str]]:
+    return {field: find_all(pattern, src, flags) for field, (pattern, flags) in pattern_map.items()}
+
+
+def entity_bucket(
+    known: list[str],
+    spacy_detected: list[str],
+    llm_detected: list[str],
+) -> dict[str, list[str]]:
+    merged = sorted(set(known + spacy_detected + llm_detected))
+    return {
+        "known": known,
+        "spacy_detected": sorted(set(spacy_detected)),
+        "llm_detected": llm_detected,
+        "final": merged,
+    }
 
 
 def is_hex_digest(s: str) -> bool:
-    """True for MD5/SHA1/SHA256-style hex strings."""
     return len(s) in (32, 40, 64) and bool(_HEX_HASH_RE.match(s))
 
 
@@ -132,7 +157,6 @@ def _bech32_decode(addr: str) -> bool:
 
 
 def is_valid_bitcoin_address(addr: str) -> bool:
-    """Reject file hashes and strings that fail Base58Check / Bech32 validation."""
     addr = addr.strip()
     if not addr or is_hex_digest(addr):
         return False
@@ -145,17 +169,13 @@ def is_valid_bitcoin_address(addr: str) -> bool:
 
 def filter_bitcoin_wallets(candidates: list[str], known_hashes: set[str]) -> list[str]:
     known = {h.lower() for h in known_hashes}
-    out: list[str] = []
-    for addr in candidates:
-        if addr.lower() in known:
-            continue
-        if is_valid_bitcoin_address(addr):
-            out.append(addr)
-    return sorted(set(out))
+    return sorted({
+        addr for addr in candidates
+        if addr.lower() not in known and is_valid_bitcoin_address(addr)
+    })
 
 
 def is_spurious_entity(text: str) -> bool:
-    """Filter NER false positives from unknown actor/malware lists."""
     cleaned = collapse_ws(text)
     if len(cleaned) < 4:
         return True
@@ -180,14 +200,12 @@ def is_spurious_entity(text: str) -> bool:
 
 
 def is_valid_registry_key(key: str) -> bool:
-    """Drop YARA-style patterns mistaken for registry paths."""
     if "|" in key or ".*" in key:
         return False
     return key.startswith("HK") and "\\" in key
 
 
 def overlaps_known_actor(name: str, known_actors: list[str]) -> bool:
-    """Skip unknown NER hits that duplicate a known actor alias."""
     n = re.sub(r"^the\s+", "", collapse_ws(name).lower())
     for known in known_actors:
         k = re.sub(r"^the\s+", "", collapse_ws(known).lower())

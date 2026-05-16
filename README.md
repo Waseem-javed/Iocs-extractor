@@ -1,66 +1,105 @@
 # CTI Agent IOC Extractor
 
-A professional-grade Cyber Threat Intelligence (CTI) tool for extracting Indicators of Compromise (IOCs) from unstructured reports, articles, and blog posts.
+A Cyber Threat Intelligence (CTI) tool for extracting Indicators of Compromise (IOCs) and threat context from unstructured reports, articles, and blog posts. It combines regex parsing, spaCy NER, and LLM analysis (via LangChain + OpenRouter).
 
-## 🚀 Features
+## Features
 
-- **Standard IOC Extraction**: Automatically identifies and extracts common indicators using optimized regex patterns:
-  - IPv4 Addresses (Plain & Defanged)
-  - Domains & URLs (Plain & Defanged)
-  - File Hashes (MD5, SHA1, SHA256)
-  - CVE IDs & MITRE ATT&CK Techniques (TTPs)
-  - Bitcoin Wallets, Emails, Registry Keys, and Named Mutexes.
-- **Intelligent Entity Recognition**: Leverages **spaCy NLP** to identify threat actors and malware families that aren't in predefined lists.
-- **Advanced Categorization**:
-  - **Known**: Matches identified against a curated list of high-profile threat groups and malware.
-  - **Unknown**: Potential new threats discovered using Named Entity Recognition (NER) and linguistic context.
-- **Context-Aware Discovery**: High-confidence detection for unknown entities by analyzing their proximity to CTI keywords (e.g., "backdoor", "zero-day", "espionage").
-- **Structured Output**: Saves all findings into a clean, hierarchical `output.json` file for easy integration with other tools or SIEMs.
+- **IOC extraction** — regex-based detection for:
+  - IPv4 addresses (plain and defanged)
+  - Domains and URLs (plain and defanged)
+  - File hashes (MD5, SHA1, SHA256)
+  - CVE IDs and MITRE ATT&CK technique IDs (TTPs)
+  - Email addresses, registry keys, named mutexes, and user agents
+  - Bitcoin wallets (with checksum validation to reduce false positives)
+- **Threat actor & malware detection**:
+  - **Known** — curated pattern lists in `patterns.py`
+  - **spaCy NER** — context-aware unknown entities near CTI keywords
+  - **LLM** — LangChain chains for actors, malware, and a short report summary
+- **Structured output** — hierarchical `app/output.json` for SIEM or downstream tooling
 
-## 🛠️ Installation
+## Project structure
 
-1. **Clone the repository**:
+```
+CTI/
+├── .env.example          # Environment template (copy to .env)
+├── requirements.txt
+├── app/
+│   ├── app.py            # Main pipeline and CLI entry point
+│   ├── patterns.py       # Regex patterns, IOC map, label sets
+│   ├── helpers.py        # Normalization, extraction, validation helpers
+│   ├── config.py         # Loads settings from .env
+│   ├── prompts.py        # LangChain prompt templates
+│   ├── chains.py         # LLM client and analysis chains
+│   ├── report.txt        # Input report (your text goes here)
+│   └── output.json       # Generated results
+```
+
+## Installation
+
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/Waseem-javed/Iocs-extractor.git
    cd Iocs-extractor
    ```
 
-2. **Set up a virtual environment**:
+2. **Create and activate a virtual environment**
 
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    ```
 
-3. **Install dependencies**:
+3. **Install dependencies**
+
    ```bash
-   pip install spacy
+   pip install -r requirements.txt
    python -m spacy download en_core_web_sm
    ```
 
-## 📖 Usage
+4. **Configure environment variables**
 
-1. Place your unstructured text report in `app/report.txt`.
+   ```bash
+   cp .env.example .env
+   ```
+
+   Edit `.env` and set your API key and model settings:
+
+   | Variable          | Description                                      |
+   | ----------------- | ------------------------------------------------ |
+   | `OPENAI_API_KEY`  | API key (e.g. OpenRouter)                          |
+   | `OPENAI_API_BASE` | API base URL (default: OpenRouter)                 |
+   | `MODEL_NAME`      | Model ID for ChatOpenAI                            |
+   | `TEMPERATURE`     | Sampling temperature (default: `0.2`)              |
+   | `MAX_TOKENS`      | Max tokens (reserved for future use)             |
+
+   `.env` is gitignored — never commit real credentials.
+
+## Usage
+
+1. Place your report text in `app/report.txt`.
 2. Run the extractor:
+
    ```bash
    python3 -m app.app
    ```
-3. View the results in `app/output.json`.
 
-## 📂 Project Structure
+3. Open `app/output.json` for results.
 
-- `app/app.py`: Core logic for extraction and NLP processing.
-- `app/patterns.py`: Curated regex patterns and CTI keyword lists.
-- `app/helpers.py`: Utility functions for normalization and classification.
-- `app/report.txt`: Input file for unstructured reports.
-- `app/output.json`: Structured extraction results.
+Example output sections:
 
-## 🛡️ Requirements
+- `summary` — LLM-generated report summary
+- `ips`, `domains`, `urls`, `hashes`, `cves`, `ttps`, etc.
+- `threat_actors` / `malware` — each with `known`, `spacy_detected`, `llm_detected`, and `final` lists
 
-- Python 3.8+
-- spaCy (`en_core_web_sm` model)
+## Requirements
+
+- Python 3.10+
+- [spaCy](https://spacy.io/) with `en_core_web_sm`
+- [LangChain](https://python.langchain.com/) (`langchain-openai`, `langchain-core`)
+- [python-dotenv](https://github.com/theskumar/python-dotenv)
+- An OpenAI-compatible API key (tested with [OpenRouter](https://openrouter.ai/))
 
 ---
 
-_Developed for Cyber Threat Intelligence professionals to automate the tedious task of manual IOC collection._
+_Developed for Cyber Threat Intelligence professionals to automate manual IOC collection and triage._

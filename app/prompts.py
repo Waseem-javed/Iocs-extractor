@@ -1,6 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 
-ACTOR_TEMPLATE = """
+TEMPLATES = {
+    "actor": """
 You are an expert Cyber Threat Intelligence analyst.
 
 Extract **all** threat actor names, groups, APTs, or threat actor aliases from the text.
@@ -16,9 +17,8 @@ Text: "APT28, also known as Fancy Bear and Sofacy..."
 
 TEXT:
 {context}
-"""
-
-MALWARE_TEMPLATE = """
+""",
+    "malware": """
 You are a malware intelligence analyst.
 
 Extract ONLY malware, ransomware, trojan, botnet, or malicious tool names.
@@ -30,26 +30,16 @@ Rules:
 
 TEXT:
 {context}
-"""
-
-SUMMARY_TEMPLATE = """
+""",
+    "summary": """
 Explain this cyber threat report in 3 short lines.
 
 TEXT:
 {context}
-"""
+""",
+}
 
-actor_prompt = PromptTemplate(
-    input_variables=["context"],
-    template=ACTOR_TEMPLATE,
-)
-
-malware_prompt = PromptTemplate(
-    input_variables=["context"],
-    template=MALWARE_TEMPLATE,
-)
-
-summary_prompt = PromptTemplate(
-    input_variables=["context"],
-    template=SUMMARY_TEMPLATE,
-)
+PROMPTS = {
+    name: PromptTemplate(input_variables=["context"], template=template.strip())
+    for name, template in TEMPLATES.items()
+}
